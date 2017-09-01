@@ -16,12 +16,12 @@ A sample json looks like this:
   "baseUrl": "https://my.jira.instance",
   "filters": [
     {
-		"key": "user1",
+	"key": "user1",
       	"value": "status not in (Done, "Won't do")  AND (reporter = user1)"
     },
     {
-		"key": "user2",
-  		"value": "resolution in (Duplicate, Done)  AND (assignee = user2)"
+	"key": "user2",
+  	"value": "resolution in (Duplicate, Done)  AND (assignee = user2)"
     }
   ]
 }
