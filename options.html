@@ -5,8 +5,13 @@
 	<script src="options.js"></script>
 </head>
 <body>
-	<label for="jsonInput">paste json config</label>
-	<textarea id="jsonInput" style="height:300px; width: 500px"></textarea>
+	<div id="currentConfigContainer" style="display: none;">
+		<label for="jsonInput">Current config</label>
+		<textarea id="currentConfig" disabled style="height:300px; width: 500px; margin: 5px 0px;"></textarea>
+	</div>
+	<button id="toggleCurrentConfig" style="margin: 5px 0px;">Show current config</button><br/>
+	<label for="jsonInput">Input config json</label>
+	<textarea id="jsonInput" style="height:300px; width: 500px; margin: 5px 0px;"></textarea>
 	<p id="errorMessage" style="color: red"></p>
 	<button id="readJson">Load</button>
 </body>

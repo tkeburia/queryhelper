@@ -17,4 +17,18 @@ $(function(){
 			}
 		});	
 	});
+	let config;
+	chrome.storage.local.get("queryHelperConfig", function(data) {
+		config = data.queryHelperConfig;
+		$('#currentConfig').text(JSON.stringify(config, null, "    "));
+	});
+
+	$('#toggleCurrentConfig').on('click', function() {
+		if ($('#toggleCurrentConfig').html() === 'Show current config') {
+			$('#toggleCurrentConfig').html('Hide current config');
+		} else {
+			$('#toggleCurrentConfig').html('Show current config');
+		}
+		$('#currentConfigContainer').toggle();
+	});
 });
